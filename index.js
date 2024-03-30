@@ -1,13 +1,21 @@
 import express from "express";
 import bodyParser from "body-parser";
 import ejs from "ejs";
-import path from "path"; // Import the path module
+
+import { fileURLToPath } from "url";
+import { dirname, join } from "path"
 
 const app = express();
 const port = process.env.PORT || 2300;
 
+
+// Get the directory name of the current module file
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 // Set the views directory explicitly
-app.set("views", path.join(__dirname, "views"));
+app.set("views", join(__dirname, "views"));
+
 
 app.use(express.static("public"));
 
