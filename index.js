@@ -9,6 +9,8 @@ app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
+console.log("where is the error??")
+
 app.get("/", (req, res) => {
   res.render("index.ejs", {
     homeLink: "/",
