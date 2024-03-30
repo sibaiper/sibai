@@ -1,15 +1,17 @@
 import express from "express";
 import bodyParser from "body-parser";
 import ejs from "ejs";
+import path from "path"; // Import the path module
 
 const app = express();
 const port = process.env.PORT || 2300;
 
+// Set the views directory explicitly
+app.set("views", path.join(__dirname, "views"));
+
 app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({ extended: true }));
-
-console.log("where is the error??")
 
 app.get("/", (req, res) => {
   res.render("index.ejs", {
