@@ -1,0 +1,101 @@
+<!-- Step 3 Add Header -->
+<%- include('partials/header.ejs') %>
+
+<link rel="stylesheet" href="styles/splide.min.css" />
+
+
+
+<main>
+  <div class="wrapper">
+    <h1>Hi, my name is Sibai</h1>
+    <p>Here are some works I have done in the past, hope you like them!</p>
+    <div class="carousel">
+      <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide slider_slider">
+              <h2>Click and <span class="drag_h2">Drag</span></h2>
+              <div class="slider_container">
+                <div class="slider-container">
+                  <!-- <span class="material-symbols-outlined">tune</span> -->
+                  <span class="material-symbols-outlined">deblur</span>
+                  <input
+                    type="range"
+                    id="rangeInput"
+                    min="0"
+                    max="100"
+                    value="75"
+                    class="slider-input"
+                  />
+                  <div class="slider">
+                    <div class="inner-slider"></div>
+                  </div>
+                  <div class="numberShow"></div>
+                  <div class="slider-shadow"></div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide dragstuff_slide">
+              <!-- <h2>Drag around</h2> -->
+              <h2><span class="dragstuff_h2">Drag</span> around</h2>
+              <div class="demo">
+                <div class="circular_demo">
+                  <div class="container">
+                    <div class="item"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide increment_slide">
+              <!-- <button class="inc_btn">Increment:</button> -->
+              <div class="inc_header">
+                <h2>Click anywhere to start animation</h2>
+                <input
+                  type="number"
+                  id="inc_val"
+                  max="200"
+                  min="0"
+                  value="100"
+                />
+              </div>
+              <div class="increment_container">
+                <div class="card">
+                  <div class="card_content">
+                    <div class="counter_wrapper">
+                      <div id="counter">0</div>
+                      <span>%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script type="module" src="JS/splide.min.js"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+  integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+/>
+
+<script src="JS/slider.js"></script>
+<script src="JS/increment.js"></script>
+<script src="JS/dragstuff.js"></script>
+
+<script type="module" src="JS/main.js"></script>
+
+<!-- Step 3 Add Footer -->
+<%- include('partials/footer.ejs') %>
