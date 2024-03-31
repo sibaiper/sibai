@@ -18,19 +18,6 @@ function getElement(selectorOrElement) {
   }
 }
 
-// function getElement(selectorOrElement) {
-//   if (typeof selectorOrElement === "string") {
-//     // If it's a string, assume it's a CSS selector and return the first matching element
-//     return document.querySelector(selectorOrElement);
-//   } else if (selectorOrElement instanceof HTMLElement) {
-//     // If it's an HTMLElement, return it directly
-//     return selectorOrElement;
-//   } else {
-//     // If it's neither a string nor an HTMLElement, return null or throw an error
-//     return null; // or throw new Error("Invalid input");
-//   }
-// }
-
 //used need later
 var d = 5;
 
