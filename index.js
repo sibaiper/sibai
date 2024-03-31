@@ -1,13 +1,12 @@
 import express from "express";
 import bodyParser from "body-parser";
 import ejs from "ejs";
-import path from 'path';
 
 const app = express();
+const port = process.env.PORT || 3000
 
-app.use(express.static("../public"));
+app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.set('views', path.join(__dirname, '../views'));
 
 app.get("/", (req, res) => {
   res.render("index.ejs", {
@@ -23,4 +22,9 @@ app.get("/contact", (req, res) => {
   });
 });
 
-module.exports = app;
+
+app.listen(port, () => {
+  console.log("port is listening on port: ", port)
+})
+
+// module.exports = app;
